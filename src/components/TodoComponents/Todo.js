@@ -3,7 +3,14 @@
 import React from "react";
 class Todo extends React.Component {
   render() {
-    return <div className="todo">{this.props.todoOnProps.task}</div>;
+    return (
+      <div
+        className={`todo${this.props.todo.completed ? "completed" : ""}`}
+        onClick={this.props.toggleItem}
+      >
+        {this.props.todo.task}
+      </div>
+    );
   }
 }
 
