@@ -58,7 +58,7 @@ class App extends React.Component {
     this.setState(previousState => {
       return {
         todos: previousState.todos.filter(todo => {
-          return todo.completed;
+          return !todo.completed;
         })
       };
     });
